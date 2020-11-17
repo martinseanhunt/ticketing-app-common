@@ -10,7 +10,7 @@
   "scripts": {
     "//": "don't use this in production.. Just for making life easier for the course",
     "clean": "del ./build/*",
-    "build": "yarn clean && tsc",
+    "build": "yarn clean && tsc ",
     "pub": "git add . && git commit -m \"updates\" && npm version patch && yarn build && npm publish"
   },
   "dependencies": {
