@@ -10,7 +10,9 @@
   "scripts": {
     "//": "clean tells the del-cli package to wipe the build folder.",
     "clean": "del ./build/*",
-    "build": "yarn clean && tsc"
+    "build": "yarn clean && tsc",
+    "//": "don't use this in production.. Just for making life easier for the course",
+    "pub": "git add . && git commit -m \"updates\" && npm version patch && yarn build"
   },
   "dependencies": {
     "del-cli": "^3.0.1",

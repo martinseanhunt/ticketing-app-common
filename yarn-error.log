@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/marty/sites/courses/grider/microservices/microservices-ticketing-app/common/package.json: Unexpected token / in JSON at position 493
+  SyntaxError: /home/marty/sites/courses/grider/microservices/microservices-ticketing-app/common/package.json: Unexpected string in JSON at position 332
       at JSON.parse (<anonymous>)
       at /home/marty/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -24,7 +24,7 @@ Trace:
 npm manifest: 
   {
     "name": "@mhunt/ticketing-common",
-    "version": "1.0.1",
+    "version": "1.0.6",
     "main": "./build/index.js",
     "types": "./build/index.d.ts",
     "files": [
@@ -32,18 +32,17 @@ npm manifest:
     ],
     "license": "MIT",
     "scripts": {
-      "//": "don't use this in production.. Just for making life easier for the course",
+      "//": "clean tells the del-cli package to wipe the build folder.",
       "clean": "del ./build/*",
-      "build": "yarn clean && tsc",
-      "pub": " && npm version patch && yarn build && npm publish"
+      "build": "yarn clean && tsc"
+      "//": "don't use this in production.. Just for making life easier for the course",
+      "pub": "git add . && git commit -m \"updates\" && npm version patch && yarn build"
     },
     "dependencies": {
       "del-cli": "^3.0.1",
       "typescript": "^4.0.5"
     }
   }
-  
-  // git add . && git commit -m \"updates\"
 
 yarn manifest: 
   No manifest
