@@ -11,7 +11,7 @@
     "//": "don't use this in production.. Just for making life easier for the course",
     "clean": "del ./build/*",
     "build": "yarn clean && tsc",
-    "pub": "git add . && git commit -m \"updates\" && npm version patch && yarn build"
+    "pub": "git add . && git commit -m \"updates\" && git push origin master && npm version patch && yarn build"
   },
   "dependencies": {
     "@types/cookie-session": "^2.0.41",
