@@ -1,6 +1,6 @@
 {
   "name": "@mhunt/ticketing-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "files": [
@@ -8,10 +8,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "//": "clean tells the del-cli package to wipe the build folder.",
+    "//": "don't use this in production.. Just for making life easier for the course",
     "clean": "del ./build/*",
     "build": "yarn clean && tsc",
-    "//": "don't use this in production.. Just for making life easier for the course",
     "pub": "git add . && git commit -m \"updates\" && npm version patch && yarn build && npm publish"
   },
   "dependencies": {
