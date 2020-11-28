@@ -16,6 +16,7 @@ export * from './middlewares/protectedRoute'
 export * from './events/Listener'
 export * from './events/Publisher'
 export * from './events/Subjects'
+export * from './events/types/OrderStatus'
 
 // Event types
 export * from './events/event-types/TicketCreatedEvent'
