@@ -21,3 +21,5 @@ export * from './events/types/OrderStatus'
 // Event types
 export * from './events/event-types/TicketCreatedEvent'
 export * from './events/event-types/TicketUpdatedEvent'
+export * from './events/event-types/OrderCreatedEvent'
+export * from './events/event-types/OrderCancelledEvent'
