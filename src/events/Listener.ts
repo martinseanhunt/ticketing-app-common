@@ -23,8 +23,9 @@ export abstract class Listener<T extends Event> {
   // T['data'] means the data should be of type data from the specific lister class that extends this one
   abstract onMessage(parsedData: T['data'], msg: Message): void
 
-  // must be defined here and only here
-  private client: Stan
+  // changing this from private to protected so the that subclasses can access
+  // the client
+  protected client: Stan
 
   // the sub class can set this property if it wants to
   protected ackWait: number = 5000
